@@ -7,7 +7,7 @@ function transformationOfArray(){
 	return new Promise((resolve)=>{
 		setTimeout(()=>{
 		resolve(array);
-	},3000)
+	},1000)
 	})
 
 	
@@ -17,13 +17,13 @@ transformationOfArray()
 	.then((arr)=>{
 	const evenNumbers = arr.filter((num)=>{
 		return num % 2 === 0
-	})
+	}) 
 
 	return new Promise((resolve)=>{
-		setTimeout(()=>{
+		
 			outputElement.textContent = evenNumbers;
 			resolve(evenNumbers)
-		},1000)
+		
 	})
 })
 .then((evenNumbers)=>{
@@ -34,6 +34,7 @@ transformationOfArray()
 	return new Promise((resolve)=>{
 		setTimeout(()=>{
 			outputElement.textContent = multipliedNumbers
-		},3000)
+			resolve()
+		},2000)
 	})
 })
