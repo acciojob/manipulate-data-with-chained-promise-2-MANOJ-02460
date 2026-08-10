@@ -7,7 +7,7 @@ function transformationOfArray(){
 	return new Promise((resolve)=>{
 		setTimeout(()=>{
 		resolve(array);
-	},1000)
+	},3000)  
 	})
 
 	
@@ -20,9 +20,11 @@ transformationOfArray()
 	}) 
 
 	return new Promise((resolve)=>{
-		
+		setTimeout(()=>{
 			outputElement.textContent = evenNumbers;
 			resolve(evenNumbers)
+		},1000)
+			
 		
 	})
 })
